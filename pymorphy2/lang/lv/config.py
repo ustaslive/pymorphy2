@@ -1,24 +1,40 @@
 # -*- coding: utf-8 -*-
 """
-Constants and configuration for Russian language.
+Constants and configuration for Latvian language.
 """
 from __future__ import absolute_import, unicode_literals
 from pymorphy2 import units
 
 # paradigm prefixes used for dictionary compilation
-PARADIGM_PREFIXES = ["", "по", "наи"]
+PARADIGM_PREFIXES = [""]        # TODO remove ["", "по", "наи"]
 
 # letters initials can start with
-INITIAL_LETTERS = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЭЮЯ'
+INITIAL_LETTERS = 'AĀBCČDEĒFGĢHIĪJKĶLĻMNŅOPRSŠTUŪVZŽ'
 
 # a list of particles which can be attached to a word using a hyphen
-PARTICLES_AFTER_HYPHEN = ["-то", "-ка", "-таки", "-де", "-тко", "-тка", "-с", "-ста"]
+# TODO remove PARTICLES_AFTER_HYPHEN = ["-то", "-ка", "-таки", "-де", "-тко", "-тка", "-с", "-ста"]
+PARTICLES_AFTER_HYPHEN = []
 
 # "ё" is sometimes written as "е", but not the other way around
-CHAR_SUBSTITUTES = {'е': 'ё'}
+CHAR_SUBSTITUTES = {'a': 'ā', 'c': 'č', 'e': 'ē', 'g': 'ģ', 'i': 'ī', 'l': 'ļ', 'n': 'ņ', 's': 'š', 'u': 'ū', 'z': 'ž'}
 
 # Prefixes which don't change the word parse.
 KNOWN_PREFIXES = [
+
+    "aero",
+    "avia",
+    "avto",
+    "auto",
+    "e-",
+    "eiro",
+    "giga",
+    "hidro",
+    "kilo",
+    "mega",
+    "tera"
+]
+"""
+    # TODO delete below
     "авиа",
     "авто",
     "аква",
@@ -164,6 +180,7 @@ KNOWN_PREFIXES = [
     "энерго",
     "этно",
 ]
+"""
 
 # default analyzer units
 DEFAULT_UNITS = [
